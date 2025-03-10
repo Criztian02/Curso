@@ -1,9 +1,16 @@
 package com.cristian.www.modules;
 
+import java.math.BigDecimal;
+
 public class Cuenta {
 
     private String nombre;
-    private float saldo;
+    private BigDecimal saldo;
+
+    public Cuenta(String nombre, BigDecimal saldo) {
+        this.nombre = nombre;
+        this.saldo = saldo;
+    }
 
     public String getNombre() {
         return nombre;
@@ -13,11 +20,11 @@ public class Cuenta {
         this.nombre = nombre;
     }
 
-    public float getSaldo() {
+    public BigDecimal getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(float saldo) {
+    public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
     }
 }
