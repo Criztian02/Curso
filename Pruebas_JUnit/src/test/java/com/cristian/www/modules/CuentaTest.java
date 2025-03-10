@@ -28,4 +28,11 @@ class CuentaTest {
         Cuenta cuenta = new Cuenta("Cristian", new BigDecimal("1000.12345"));
         assertEquals("Cristian", cuenta.getNombre());
     }
+
+    @Test
+    void cuentasIguales() {
+        Cuenta cuenta1 = new Cuenta("Cristian", new BigDecimal("1000.12345"));
+        Cuenta cuenta2 = new Cuenta("Cristian", new BigDecimal("1000.12345"));
+        assertEquals(cuenta1, cuenta2);
+    }
 }
