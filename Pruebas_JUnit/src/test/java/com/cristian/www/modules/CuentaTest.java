@@ -35,4 +35,18 @@ class CuentaTest {
         Cuenta cuenta2 = new Cuenta("Cristian", new BigDecimal("1000.12345"));
         assertEquals(cuenta1, cuenta2);
     }
+
+    @Test
+    void debitoCuenta() {
+        Cuenta cuenta = new Cuenta("Cristian", new BigDecimal("1000.12345"));
+        cuenta.debito(new BigDecimal("100"));
+        assertEquals(new BigDecimal("900.12345"), cuenta.getSaldo());
+    }
+
+    @Test
+    void creditoCuenta() {
+        Cuenta cuenta = new Cuenta("Cristian", new BigDecimal("1000.12345"));
+        cuenta.credito(new BigDecimal("100"));
+        assertEquals(new BigDecimal("1100.12345"), cuenta.getSaldo());
+    }
 }
